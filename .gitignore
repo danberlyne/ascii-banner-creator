@@ -1,2 +1,4 @@
 Flags-ASCII/**
+!Flags-ASCII/Example.txt
 Banners/**
+!Banner/Example.txt
