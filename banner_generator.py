@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# banner_generator.py - Generates banners from ASCII art.
+
 import openpyxl
 from pathlib import Path
 

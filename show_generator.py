@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# show_generator.py - Combines banners into a single text file in BBCode.
+
 import openpyxl
 from pathlib import Path
 
