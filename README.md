@@ -1,5 +1,5 @@
 # About
-This tool is intended for use in the Nation Song Contest, an online forum-based music sharing game with a format based on the Eurovision Song Contest. The tool generates banners using ASCII art, based on ASCII flags placed in the `Flags-ASCII` folder and entry data entered in the spreadsheet `entries.xlsx`.
+This tool is intended for use in online forum-based music sharing games with formats based on the Eurovision Song Contest. The tool generates banners using ASCII art, based on ASCII flags placed in the `Flags-ASCII` folder and entry data entered in the spreadsheet `entries.xlsx`.
 
 # Requirements
 This tool uses the third party module OpenPyXL. Please install this module before attempting to run the Python scripts included here.
