@@ -4,20 +4,24 @@
 import openpyxl
 from pathlib import Path
 
-wb = openpyxl.load_workbook('entries.xlsx')
-ws = wb.active
-nations = [cell for cell in ws['A'] if cell.value != 'NATION']
+def main():
+    wb = openpyxl.load_workbook('entries.xlsx')
+    ws = wb.active
+    nations = [cell for cell in ws['A'] if cell.value != 'NATION']
 
-show = []
+    show = []
 
-for nation in nations:
-    url = ws[f'D{nation.row}']
-    file = open(Path('Banners', f'{nation.value}.txt'))
-    banner = ''.join(file.readlines())
+    for nation in nations:
+        url = ws[f'D{nation.row}']
+        file = open(Path('Banners', f'{nation.value}.txt'))
+        banner = ''.join(file.readlines())
+        file.close()
+        bbcode = f'[URL={url.value}][CODE]' + banner + '[/CODE][/URL]'
+        show.append(bbcode)
+
+    file = open('show.txt', 'w')
+    file.write('\n'.join(show))
     file.close()
-    bbcode = f'[URL={url.value}][CODE]' + banner + '[/CODE][/URL]'
-    show.append(bbcode)
 
-file = open('show.txt', 'w')
-file.write('\n'.join(show))
-file.close()
+if __name__ == '__main__':
+    main()
